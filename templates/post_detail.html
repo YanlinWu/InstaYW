@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <a href= "{% url 'edit_post' object.id %}"> Edit Post</a>
+    <a href= "{% url 'delete_post' object.id %}"> Delete Post</a>
+</div>
+
+
+<p> {{ object.title }} </p>
+<image src = "/{{ object.image}}">
+
+
+
+{% endblock content%}
